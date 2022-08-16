@@ -1,0 +1,89 @@
+{
+ "properties": {
+  "displayName": "Initiative08:Enable Azure Monitor for VMs",
+  "policyType": "Custom",
+  "description": "",
+  "metadata": {
+   "category": "Monitoring",
+   "parameterScopes": {
+    "logAnalytics : Deploy Log Analytics extension for Linux VMs_1": "/subscriptions/64eeacfe-50ca-4f19-bbe6-7feb2090c7dc/resourcegroups/secops_siem",
+    "logAnalytics : Deploy - Configure Log Analytics extension to be enabled on Windows virtual machines_1": "/subscriptions/64eeacfe-50ca-4f19-bbe6-7feb2090c7dc/resourcegroups/secops_siem"
+   },
+   "createdBy": "f93efac2-08bc-4867-bc88-ab9d01b3a2cf",
+   "createdOn": "2022-06-20T07:59:10.2989498Z",
+   "updatedBy": "f93efac2-08bc-4867-bc88-ab9d01b3a2cf",
+   "updatedOn": "2022-08-08T11:27:37.764733Z",
+   "ASC": "true"
+  },
+  "parameters": {},
+  "policyDefinitions": [
+   {
+    "policyDefinitionReferenceId": "Dependency agent should be enabled for listed virtual machine images_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/11ac78e3-31bc-4f0c-8434-37ab963cea07",
+    "parameters": {},
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "[Preview]: Log Analytics Extension should be enabled for listed virtual machine images_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/32133ab0-ee4b-4b44-98d6-042180979d50",
+    "parameters": {},
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Deploy Log Analytics extension for Linux VMs_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/053d3325-282c-4e5c-b944-24faffd30d77",
+    "parameters": {
+     "logAnalytics": {
+      "value": "/subscriptions/64eeacfe-50ca-4f19-bbe6-7feb2090c7dc/resourcegroups/secops_siem/providers/microsoft.operationalinsights/workspaces/secops-siem-int"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Deploy - Configure Dependency agent to be enabled on Windows virtual machines_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/1c210e94-a481-4beb-95fa-1571b434fb04",
+    "parameters": {},
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Deploy - Configure Log Analytics extension to be enabled on Windows virtual machines_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0868462e-646c-4fe3-9ced-a733534b6a2c",
+    "parameters": {
+     "logAnalytics": {
+      "value": "/subscriptions/64eeacfe-50ca-4f19-bbe6-7feb2090c7dc/resourcegroups/secops_siem/providers/microsoft.operationalinsights/workspaces/secops-siem-int"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Deploy Dependency agent for Linux virtual machines_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/4da21710-ce6f-4e06-8cdb-5cc4c93ffbee",
+    "parameters": {},
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Deploy - Configure Dependency agent to be enabled on Windows virtual machines [Custom Images]_1",
+    "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/upskillz/providers/Microsoft.Authorization/policyDefinitions/a0670bbb-84be-4bbb-8437-cfac7e6ab391",
+    "parameters": {},
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Deploy - Configure Dependency agent to be enabled on Linux virtual machines [Custom Images]_1",
+    "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/upskillz/providers/Microsoft.Authorization/policyDefinitions/b86f4b0d-e5ac-4374-8e5d-6f383862c453",
+    "parameters": {
+     "tagName": {
+      "value": "OS Type"
+     },
+     "tagValue": {
+      "value": "Linux"
+     }
+    },
+    "groupNames": []
+   }
+  ],
+  "policyDefinitionGroups": []
+ },
+ "id": "/providers/Microsoft.Management/managementGroups/upskillz/providers/Microsoft.Authorization/policySetDefinitions/3077c0091cb945f2927d20a4",
+ "type": "Microsoft.Authorization/policySetDefinitions",
+ "name": "3077c0091cb945f2927d20a4"
+}
